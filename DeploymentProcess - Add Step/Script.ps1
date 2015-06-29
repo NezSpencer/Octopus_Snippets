@@ -1,11 +1,11 @@
-﻿$OctopusURL = "" #Octopus URL
+$OctopusURL = "" #Octopus URL
 $OctopusAPIKey = "" #Octopus API Key
-$header = @{ "X-Octopus-ApiKey" = $env:OctopusAPIKey }
+$header = @{ "X-Octopus-ApiKey" = $OctopusAPIKey }
 
 #Project to add the step
 $ProjectName = ""
 
-#File with the Json of the new step/s
+#File with the JSON of the new step/s
 $StepFile = "$PSScriptRoot\step.json"
 
 function Get-OctopusResource([string]$uri) {    
@@ -22,7 +22,7 @@ $Project = Get-OctopusResource /api/projects/$ProjectName
 $DeploymentProcess = Get-OctopusResource $Project.Links.DeploymentProcess
 
 #Converting Json step into a PS Object. 
-#If you'd rather get the step from someplace else than a file, just make sure to set the Json as the value of $Step
+#If you'd rather get the step from someplace else than a file, just make sure to set the JSON as the value of $Step
 $step = Get-Content $StepFile | ConvertFrom-Json
 
 #Changing colletion to ArrayList to be able to add steps
