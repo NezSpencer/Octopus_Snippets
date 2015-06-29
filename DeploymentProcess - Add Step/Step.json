@@ -1,5 +1,5 @@
 {       
-    "Name": "Step10",
+    "Name": "StepName", 
     "RequiresPackagesToBeAcquired": false,
     "Properties": {
         "Octopus.Action.TargetRoles": "WebServer"
@@ -8,12 +8,11 @@
     "StartTrigger": "StartAfterPrevious",
     "Actions": [
         {
-                
-            "Name": "Step10",
+            "Name": "StepName", 
             "ActionType": "Octopus.Script",
             "Environments": [ ],
             "Properties": {
-                "Octopus.Action.Script.ScriptBody": "$env:USERDOMAIN + \"\\\" + $env:USERNAME"
+                "Octopus.Action.Script.ScriptBody": "\"Hello world\""
             },
             "SensitiveProperties": { }
         }

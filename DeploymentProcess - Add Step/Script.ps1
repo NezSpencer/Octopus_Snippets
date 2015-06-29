@@ -1,9 +1,9 @@
-﻿$OctopusURL = $env:OctopusURL #Octopus URL
-$OctopusAPIKey = $env:OctopusAPIKey #Octopus API Key
+﻿$OctopusURL = "" #Octopus URL
+$OctopusAPIKey = "" #Octopus API Key
 $header = @{ "X-Octopus-ApiKey" = $env:OctopusAPIKey }
 
 #Project to add the step
-$ProjectName = "Powershell3"
+$ProjectName = ""
 
 #File with the Json of the new step/s
 $StepFile = "$PSScriptRoot\step.json"
