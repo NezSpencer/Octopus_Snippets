@@ -5,7 +5,7 @@ $OctopusURL = "" #Your Octopus Server URL
 $header = @{ "X-Octopus-ApiKey" = $OctopusAPIKey }
 
 #Module Name and Powershell Script
-$ModuleName = "SomeNewTemplate21231231"
+$ModuleName = "MyNewTemplateName"
 $ModuleScript = "write-host 'hello world!'"
 
 
