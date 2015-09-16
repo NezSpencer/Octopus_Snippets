@@ -28,11 +28,10 @@ $ReleaseBody =  @{
  
 $release = Invoke-WebRequest -Uri $OctopusURL/api/releases -Method Post -Headers $Header -Body $ReleaseBody | ConvertFrom-Json
  
-#Creating deployment with the specific machine IDs
+#Creating deployment
 $DeploymentBody = @{ 
-            ReleaseID = $release.Id #mandatory
-            EnvironmentID = $Environment.id #mandatory
-            specificmachineIDs =  $machineIDs
+            ReleaseID = $release.Id
+            EnvironmentID = $Environment.id           
           } | ConvertTo-Json
           
 $deployment = Invoke-WebRequest -Uri $OctopusURL/api/deployments -Method Post -Headers $Header -Body $DeploymentBody
