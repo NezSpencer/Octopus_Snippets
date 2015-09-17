@@ -1,5 +1,9 @@
-﻿Add-Type -Path "Newtonsoft.Json.dll"
-Add-Type -Path "Octopus.Client.dll"
+#You can these 2 dlls from your Octopus Server/Tentacle install dir or from
+#https://www.nuget.org/packages/Octopus.Client/3.1.0-beta0002
+#https://www.nuget.org/packages/Newtonsoft.Json/
+
+Add-Type -Path "Newtonsoft.Json.dll" 
+Add-Type -Path "Octopus.Client.dll" 
 
 $OctopusURL = ""#Your Octopus URL
 $OctopusAPIKey = "" #Your Octopus API Key
