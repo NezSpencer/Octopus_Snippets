@@ -12,6 +12,5 @@ $repository = new-object Octopus.Client.OctopusRepository $endpoint
 
 $team = $repository.Teams.FindByName($TeamName)
 $team.EnvironmentIds.Add($EnvironmentName)
-$team.EnvironmentIds
 
 $repository.Teams.Modify($team)
